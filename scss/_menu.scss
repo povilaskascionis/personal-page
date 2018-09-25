@@ -1,0 +1,33 @@
+//menu toggle button
+
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  @include easeOut;
+
+  .btn-line {
+    width: 28px;
+    height: 5px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    border-radius: 3px;
+    @include easeOut;
+  }
+
+  //button transition to X
+  &.close .btn-line {
+    //line 1 and 3 and line 2 is hidden
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+  }
+}
