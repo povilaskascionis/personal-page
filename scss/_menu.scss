@@ -62,7 +62,7 @@
     background: darken($primary-color, 5);
     list-style: none;
     @include easeOut;
-    transform: translateX(100%);
+    transform: translate3d(100%, 0, 0);
     &.show {
       transform: translateX(0);
     }
@@ -74,7 +74,7 @@
     background: darken($primary-color, 2);
     list-style: none;
     @include easeOut;
-    transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0);
     &.show {
       transform: translateX(0);
     }
