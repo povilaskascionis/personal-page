@@ -1,13 +1,23 @@
 // Widest of screens
 @include mediaXL {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 //meh laptops and very meh desktops
 @include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // tablets and old netbooks
 @include mediaMd {
+  h1 {
+    font-size: 32px;
+  }
+
   main {
     align-items: center;
     text-align: center;
@@ -54,6 +64,14 @@
       'job3';
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  body {
+    font-size: 1rem;
+  }
 }
 
 // phones
@@ -61,5 +79,9 @@
   main#home h1 {
     margin-top: 10vh;
     font-size: 70px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
